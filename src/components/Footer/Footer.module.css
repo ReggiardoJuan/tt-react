@@ -1,0 +1,30 @@
+.footer {
+    border-top: 1px solid #cccaca;
+    color: #202020;
+    padding: 30px 40px;
+    margin-top: auto;
+    text-align: center;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+}
+
+.footer_links {
+    list-style: none;
+    /* gap: 1rem; */
+    /* margin-right: 1rem; */
+    text-decoration: none;
+    color: #1f1e1e;
+    font-size: 14px;
+    transition: color 0.3s;
+}

@@ -1,0 +1,50 @@
+p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+li {
+    list-style: none !important;
+}
+
+.main-content {
+    flex: 1;
+    padding: 1rem;
+}
+
+.image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 50vh;
+}
+
+.image-container svg {
+    transform: rotate(5deg);
+    margin-bottom: 20px;
+}
+
+.pill {
+  display: inline-flex;
+  padding: 0.25em 0.75em;
+  border-radius: 1000px;
+  background-color: var(--pico-contrast);
+  color: var(--pico-contrast-inverse);
+  font-size: 0.67rem;
+}
+
+.pill svg {
+    padding: 0.25em;
+}
+
+.navigation {
+    text-decoration: none;
+    display: flex;
+    margin-bottom: 1rem;
+}

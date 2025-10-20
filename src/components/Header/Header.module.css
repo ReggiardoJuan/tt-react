@@ -1,0 +1,29 @@
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 60px;
+    top: 0;
+    position: sticky;
+    border-bottom: 2px solid var(--pico-primary);
+    background-color: var(--pico-background-color);
+    z-index: 1000;
+}
+
+.logo img {
+    max-height: 45px;
+    cursor: pointer;
+    width: auto;
+    transition: all 0.3s;
+    background-clip: border-box;
+    border: 2px solid transparent;
+    border-radius: 50px;
+    padding: 5px;
+    background-color: aliceblue;
+}
+
+.logo img:hover {
+    transform: scale(1.1);
+}

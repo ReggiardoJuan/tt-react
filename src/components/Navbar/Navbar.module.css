@@ -1,0 +1,30 @@
+
+.navigation {
+    /* background-color: var(--pico-primary); */
+    /* color: var(--pico-primary-inverse); */
+    /* display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 60px; */
+}
+
+.nav_links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav_icons svg{
+    padding: 20px 0 0 0 0;
+    align-items: center;
+    stroke: var(--pico-primary);
+}
+
+.nav_icons svg:hover{
+    stroke: var(--pico-secondary);
+}
