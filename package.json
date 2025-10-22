@@ -3,6 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
+  "homepage": "https://reggiardojuan.github.io/tt-react/",
   "author": {
     "name": "Juan Jose Reggiardo",
     "email": "juanreggiardo@aol.com"
@@ -14,11 +15,14 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@picocss/pico": "^2.1.1",
     "feather-icons": "^4.29.2",
+    "gh-pages": "^6.3.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "react-feather": "^2.0.10",
