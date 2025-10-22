@@ -1,11 +1,11 @@
-.products_list {
+.products-list {
     padding: 1rem;
     margin: 0;
     display: block;
     gap: 1rem;
 }
 
-.product_item:hover {
+.product-item:hover {
     transform: scale(1.02);
 }
 

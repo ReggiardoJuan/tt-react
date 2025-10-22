@@ -1,37 +1,44 @@
 import { Home, ShoppingBag, User } from 'react-feather';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 import styles from './Navbar.module.css';
 
 export default function Navbar() {
+    const navLink = (props, title) => (
+        <NavLink
+            {...props}
+            activeClassName={styles.active}
+            className={({ isActive }) => (isActive ? styles.active : '')}
+        >
+            {title}
+        </NavLink>
+    );
     return (
         <nav className={styles.navigation}>
-            <ul className={styles.nav_links}>
+            <ul className={styles['nav-links']}>
                 <li>
-                    <Link to="/">
-                        <Home />
-                    </Link>
+                    { navLink({ to: '/' }, <Home />) }
                 </li>
                 <li>
-                    <Link to={'/products/women\'s clothing'}>Fashion</Link>
+                    { navLink({ to: '/products/women\'s clothing' }, 'Fashion') }
                 </li>
                 <li>
-                    <Link to={'/products/electronics'}>Tecnologia</Link>
+                    { navLink({ to: '/products/electronics' }, 'Tecnologia') }
                 </li>
                 <li>
-                    <Link to={'/products/nature'}>Naturaleza</Link>
+                    { navLink({ to: '/products/outdoor' }, 'Aire libre') }
                 </li>
             </ul>
-            <ul className={styles.nav_icons}>
+            <ul className={styles['nav-icons']}>
                 {/* <li>
                     <Link to="/login">
                         <User />
                     </Link>
                 </li> */}
                 <li>
-                    <Link to={'/cart'}>
+                    <NavLink to={'/cart'}>
                         <ShoppingBag />
-                    </Link>
+                    </NavLink>
                 </li>
             </ul>
         </nav>

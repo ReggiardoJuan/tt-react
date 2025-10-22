@@ -58,9 +58,9 @@ function ProductsListPage({ fetchProducts, title }) {
             <section id='products'>
                 <ReturnHome />
                 <h2>{title}</h2>
-                <ul className={styles.products_list}>
+                <ul className={styles['products-list']}>
                     {availableProducts.map((product) => (
-                        <li key={product.id} className={styles.product_item}>
+                        <li key={product.id} className={styles['product-item']}>
                             <ProductCard product={product} handleAddToCart={handleAddToCart} />
                         </li>
                     ))}

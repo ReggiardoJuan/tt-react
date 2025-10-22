@@ -10,6 +10,11 @@ export default defineConfig([
     js.configs.recommended,
     {
         files: ['**/*.{js,jsx}'],
+        plugins: {
+            import: importPlugin,
+            'react-hooks': reactHooks,
+            'react-refresh': reactRefresh,
+        },
         languageOptions: {
             globals: globals.browser,
             parserOptions: {
@@ -18,15 +23,21 @@ export default defineConfig([
                 sourceType: 'module',
             },
         },
-        plugins: {
-            import: importPlugin,
-            'react-hooks': reactHooks,
-            'react-refresh': reactRefresh,
+        settings: {
+            react: {
+                version: 'detect',
+            },
         },
         rules: {
             'block-spacing': ['warn', 'always'],
             curly: 'error',
             eqeqeq: 'error',
+            'no-console': ['warn', { allow: ['error', 'warn'] }],
+            'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]' }],
+            'object-curly-spacing': ['error', 'always'],
+            quotes: ['error', 'single'],
+            semi: ['error', 'always', { omitLastInOneLineBlock: true }],
+
             'import/order': [
                 'error',
                 {
@@ -41,11 +52,6 @@ export default defineConfig([
                     pathGroupsExcludedImportTypes: ['react'],
                 },
             ],
-            'no-console': ['warn', { allow: ['error', 'warn'] }],
-            'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]' }],
-            'object-curly-spacing': ['error', 'always'],
-            quotes: ['error', 'single'],
-            semi: ['error', 'always', { omitLastInOneLineBlock: true }],
         },
     },
 ]);

@@ -9,7 +9,7 @@
     height: 60px; */
 }
 
-.nav_links {
+.nav-links {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,12 +19,25 @@
     margin: 0;
 }
 
-.nav_icons svg{
+.nav-icons svg{
     padding: 20px 0 0 0 0;
     align-items: center;
     stroke: var(--pico-primary);
+    &:hover {
+        stroke: var(--pico-secondary);
+    }
 }
 
-.nav_icons svg:hover{
-    stroke: var(--pico-secondary);
+a.active:not(:has(svg)) {
+    border: 2px solid var(--pico-primary);
+    border-radius: 999px;
+    padding: 4px 12px;
+    text-decoration: none;
+    transition: all 0.1s ease-in-out;
+}
+
+a.active svg {
+    text-decoration: none;
+    transform: scale(1.2);
+    transition: all 0.1s ease-in-out;
 }

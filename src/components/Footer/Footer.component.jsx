@@ -7,7 +7,7 @@ function Footer() {
 
     return (
         <footer className={styles.footer}>
-            <ul className={styles.footer_links}>
+            <ul className={styles['footer-links']}>
                 <li>
                     <Link to="/about">About Us</Link>
                 </li>
