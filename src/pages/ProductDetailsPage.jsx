@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom';
 import ErrorPage from './ErrorPage';
 import NoResultsPage from './NoResultsPage';
 import Loader from '../components/Loader/Loader.component';
-import Product from '../components/Product/ProductDetails.component';
+import ProductDetails from '../components/Product/ProductDetails.component';
 import { useProducts } from '../hooks/useProducts';
 import { getProductById } from '../services/products';
 import styles from './ProductsList/ProductsList.module.css';
@@ -44,7 +44,7 @@ export default function ProductDetailsPage() {
     return (
         <>
             <ReturnHome />
-            <Product product={product} />
+            <ProductDetails product={product} />
         </>
     );
 }

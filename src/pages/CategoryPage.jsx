@@ -6,7 +6,7 @@ import { getProductsByCategory } from '../services/products';
 import ProductsListPage from './ProductsList/ProductsListPage';
 import { toTitleCase } from '../utils/string.utils';
 
-export default function Category() {
+export default function CategoryPage() {
     const { category } = useParams();
 
     const getProducts = useCallback(() => {

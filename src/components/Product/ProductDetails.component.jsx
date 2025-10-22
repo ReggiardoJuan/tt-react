@@ -8,6 +8,7 @@ export default function ProductDetails({ product }) {
     return (
         <div className='container'>
             <div className={styles.product}>
+                <img className={styles['product-image']} src={product.image} alt={product.title} />
                 <div className={styles['product-info']}>
                     <h3 className={styles['product-title']}>{product.title}</h3>
                     <p>{product.description}</p>
@@ -26,7 +27,6 @@ export default function ProductDetails({ product }) {
                         </p>
                     </div>
                 </div>
-                <img className={styles['product-image']} src={product.image} alt={product.title} />
             </div>
         </div>
     );
