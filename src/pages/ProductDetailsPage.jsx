@@ -9,6 +9,7 @@ import Product from '../components/Product/ProductDetails.component';
 import { useProducts } from '../hooks/useProducts';
 import { getProductById } from '../services/products';
 import styles from './ProductsList/ProductsList.module.css';
+import ReturnHome from '../components/ReturnHome';
 
 export default function ProductDetailsPage() {
     const { id } = useParams();
@@ -41,6 +42,9 @@ export default function ProductDetailsPage() {
     }
 
     return (
-        <Product product={product} />
+        <>
+            <ReturnHome />
+            <Product product={product} />
+        </>
     );
 }

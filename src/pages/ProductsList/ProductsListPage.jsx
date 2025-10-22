@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Cart from '../../components/Cart/Cart.component';
 import Loader from '../../components/Loader/Loader.component';
 import ProductCard from '../../components/Product/ProductCard.component';
+import ReturnHome from '../../components/ReturnHome';
 import { useProducts } from '../../hooks/useProducts';
 import ErrorPage from '../ErrorPage';
 import NoResultsPage from '../NoResultsPage';
@@ -39,16 +40,23 @@ function ProductsListPage({ fetchProducts, title }) {
     }
 
     if (error) {
-        return <ErrorPage error={error} />;
+        return <>
+            <ReturnHome />
+            <ErrorPage error={error} />;
+        </>;
     }
 
     if (availableProducts.length === 0) {
-        return <NoResultsPage />;
+        return <>
+            <ReturnHome />
+            <NoResultsPage />
+        </>;
     }
 
     return (
         <div className='container'>
             <section id='products'>
+                <ReturnHome />
                 <h2>{title}</h2>
                 <ul className={styles.products_list}>
                     {availableProducts.map((product) => (

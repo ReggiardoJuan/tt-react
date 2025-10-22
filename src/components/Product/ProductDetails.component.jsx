@@ -7,7 +7,6 @@ import styles from './Product.module.css';
 export default function ProductDetails({ product }) {
     return (
         <div className='container'>
-            <ReturnHome />
             <div className={styles.product}>
                 <div className={styles['product-info']}>
                     <h3 className={styles['product-title']}>{product.title}</h3>
