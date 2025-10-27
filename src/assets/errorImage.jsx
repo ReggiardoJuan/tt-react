@@ -1,8 +1,8 @@
 const ErrorImage = () => {
     return (
         <svg height="200" width="200" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-            <g stroke-width="0" />
-            <g stroke-linecap="round" stroke-linejoin="round" />
+            <g strokeWidth="0" />
+            <g strokeLinecap="round" strokeLinejoin="round" />
             <path
                 style={{ fill: '#fe834d' }}
                 d="M330.621 288.681c0-59.261-33.41-107.302-74.621-107.302-59.261 0-107.302 48.041-107.302 107.302S196.739 395.983 256 395.983c41.212 0 74.621-48.041 74.621-107.302M256 181.379v214.604c59.261 0 107.302-48.041 107.302-107.302S315.261 181.379 256 181.379"

@@ -1,36 +1,11 @@
-import { useState } from 'react';
 
 import { Link } from 'react-router-dom';
 
 import styles from './Product.module.css';
+import ProductCardActions from './ProductCardActions.component';
 import { trimString } from '../../utils/string.utils';
 
 export default function ProductCard({ product, handleAddToCart }) {
-    const [value, setValue] = useState(0);
-
-    const handleCart = (product) => {
-        handleAddToCart({
-            ...product,
-            quantity: value,
-            total: value * product.price,
-        });
-        setValue(0);
-    };
-
-    const handleChange = (event) => {
-        const newValue = Number(event.target.value);
-        setValue(newValue);
-    };
-
-    const handleAdd = (amount) => {
-        const newValue = value + amount;
-        setValue(newValue);
-    };
-
-    const isDisabled = () => {
-        return value <= 0;
-    };
-
     return (
         <div className={styles.product}>
             <img className={styles['product-image']} src={product.image} alt={product.title} />
@@ -47,18 +22,7 @@ export default function ProductCard({ product, handleAddToCart }) {
                 </div>
             </div>
             <div className={styles.actions}>
-                <div className={styles.quantity}>
-                    <button className="outline" onClick={() => handleAdd(-1)} disabled={isDisabled()}>
-                        −
-                    </button>
-                    <input type="number" value={value} onChange={handleChange} min="0" max="100" />
-                    <button className="outline" onClick={() => handleAdd(1)}>
-                        +
-                    </button>
-                </div>
-                <button aria-label="Agregar" disabled={isDisabled()} onClick={() => handleCart(product)}>
-                    Agregar
-                </button>
+                <ProductCardActions handleAddToCart={handleAddToCart} product={product} />
                 <Link to={`/products/${product.category}/${product.id}`} state={product}>
                     <button className="outline" aria-label="Ver detalles">
                         Ver detalles
