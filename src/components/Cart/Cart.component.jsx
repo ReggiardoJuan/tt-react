@@ -43,9 +43,6 @@ export default function Cart({ cartProducts, setCartProducts }) {
                             <p className={styles.price}>{product.quantity}un. x ${product.price.toFixed(2)}</p>
                         </div>
                         <div className={styles['cart-item-info-right']}>
-                            <Link to={`/products/${product.category}`}>
-                                <span className="pill">{product.category}</span>
-                            </Link>
                             <Link to={`/products/${product.category}/${product.id}`} state={product}>
                                 <LinkIcon />
                             </Link>

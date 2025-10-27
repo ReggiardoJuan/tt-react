@@ -2,14 +2,11 @@ import { useCallback } from 'react';
 
 import { useParams } from 'react-router-dom';
 
-import ErrorPage from './ErrorPage';
-import NoResultsPage from './NoResultsPage';
-import Loader from '../components/Loader/Loader.component';
 import ProductDetails from '../components/Product/ProductDetails.component';
+import ReturnHome from '../components/share/ReturnHome';
+import { StateWrapper } from '../components/share/StateWrapper';
 import { useProducts } from '../hooks/useProducts';
 import { getProductById } from '../services/products';
-import styles from './ProductsList/ProductsList.module.css';
-import ReturnHome from '../components/ReturnHome';
 
 export default function ProductDetailsPage() {
     const { id } = useParams();
@@ -24,27 +21,10 @@ export default function ProductDetailsPage() {
         error,
     } = useProducts(getProduct);
 
-    if (loading) {
-        return (
-            <div className={styles.loader}>
-                <Loader size={72} />
-                <p>Cargando productos...</p>
-            </div>
-        );
-    }
-
-    if (error) {
-        return <ErrorPage error={error} />;
-    }
-
-    if (!product) {
-        return <NoResultsPage />;
-    }
-
     return (
-        <>
+        <StateWrapper loading={loading} error={error} items={product}>
             <ReturnHome />
             <ProductDetails product={product} />
-        </>
+        </StateWrapper>
     );
 }

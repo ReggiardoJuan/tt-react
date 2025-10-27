@@ -1,7 +1,6 @@
 import { ShoppingCart, Star } from 'react-feather';
 import { Link } from 'react-router-dom';
 
-import ReturnHome from '../ReturnHome';
 import styles from './Product.module.css';
 
 export default function ProductDetails({ product }) {

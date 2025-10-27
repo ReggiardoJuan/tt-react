@@ -1,7 +1,7 @@
 import { useCallback } from 'react';
 
+import ECommerce from '../features/Ecommerce';
 import { getProducts } from '../services/products';
-import ProductsListPage from './ProductsList/ProductsListPage';
 
 export default function HomePage() {
 
@@ -10,5 +10,5 @@ export default function HomePage() {
     }, []);
 
 
-    return <ProductsListPage fetchProducts={getAllProducts} title="Todos los productos" />;
+    return <ECommerce fetchProducts={getAllProducts} title="Todos los productos" />;
 }
