@@ -3,8 +3,8 @@ import { useCallback } from 'react';
 import { useParams } from 'react-router-dom';
 
 import ProductDetails from '../components/Product/ProductDetails.component';
-import ReturnHome from '../components/share/ReturnHome';
-import { StateWrapper } from '../components/share/StateWrapper';
+import ReturnHome from '../components/shared/ReturnHome';
+import { States } from '../components/shared/States';
 import { useProducts } from '../hooks/useProducts';
 import { getProductById } from '../services/products';
 
@@ -21,11 +21,16 @@ export default function ProductDetailsPage() {
         error,
     } = useProducts(getProduct);
 
+    const state = States({ loading, error, items: product });
+
+    if (state) {
+        return state;
+    }
+
     return (
         <div className="container">
-            <StateWrapper loading={loading} error={error} items={product}>
-                <ProductDetails product={product} />
-            </StateWrapper>
+            <ReturnHome />
+            <ProductDetails product={product} />
         </div>
     );
 }

@@ -1,6 +1,6 @@
 
 import Cart from '../components/Cart/Cart.component';
-import ReturnHome from '../components/share/ReturnHome';
+import ReturnHome from '../components/shared/ReturnHome';
 
 export default function CartPage({ cartProducts = [] }) {
     return (

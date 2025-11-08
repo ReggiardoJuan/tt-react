@@ -1,5 +1,3 @@
-import { useState } from 'react';
-
 import { Facebook, Mail, Phone, Twitter } from 'react-feather';
 
 import styles from './ContactPage.module.css';
