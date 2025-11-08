@@ -9,10 +9,10 @@ function Footer() {
         <footer className={styles.footer}>
             <ul className={styles['footer-links']}>
                 <li>
-                    <Link to="/about">About Us</Link>
+                    <Link to="/about">Nosotros</Link>
                 </li>
                 <li>
-                    <Link to="/contact">Contact</Link>
+                    <Link to="/contact">Contacto</Link>
                 </li>
             </ul>
             <p>&copy; {year} Talento Tech. All rights reserved.</p>

@@ -7,7 +7,6 @@ export default function Navbar() {
     const navLink = (props, title) => (
         <NavLink
             {...props}
-            activeClassName={styles.active}
             className={({ isActive }) => (isActive ? styles.active : '')}
         >
             {title}

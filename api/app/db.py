@@ -1,0 +1,7 @@
+from peewee import SqliteDatabase
+import os
+
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+DB_PATH = os.path.join(BASE_DIR, "..", "db", "data.sqlite")
+
+db = SqliteDatabase(DB_PATH)

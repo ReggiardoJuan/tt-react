@@ -7,10 +7,22 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
-*.local
+# sqlite
+*.db
+
+# Python
+__pycache__/
+*.pyc
+venv/
+.venv/
+
+# React
+web/node_modules/
+web/dist/
+web/node_modules
+web/dist
+web/dist-ssr
+web/*.local
 
 # Editor directories and files
 .vscode/*

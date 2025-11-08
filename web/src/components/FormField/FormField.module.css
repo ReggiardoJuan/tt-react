@@ -1,0 +1,15 @@
+.form-field {
+    text-align: justify;
+    margin-bottom: 1rem;
+    font-size: 0.8rem;
+}
+
+#valid-helper,
+#description-helper{
+    font-size: 0.6rem;
+}
+
+.req-symbol{
+    color: red !important;
+    font-size: 0.6rem;
+}

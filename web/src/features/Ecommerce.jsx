@@ -3,7 +3,7 @@ import { useState } from 'react';
 import Cart from '../components/Cart/Cart.component';
 import ProductsList from '../components/Product/ProductList.component';
 import ReturnHome from '../components/share/ReturnHome';
-import { StateWrapper } from '../components/share/StateWrapper';
+import { States } from '../components/share/States';
 import { useProducts } from '../hooks/useProducts';
 
 function ECommerce({ fetchProducts, title }) {
@@ -27,19 +27,21 @@ function ECommerce({ fetchProducts, title }) {
         }
     };
 
+    const state = States({ loading, error, items: availableProducts });
+    if (state) {
+        return state;
+    }
+
     return (
-        <StateWrapper loading={loading} error={error} items={availableProducts}>
-            <div className="container">
-                <section id="products">
-                    <ReturnHome />
-                    <ProductsList title={title} products={availableProducts} handleAddToCart={handleAddToCart} />
-                </section>
-                <section id="cart">
-                    <hr />
-                    <Cart cartProducts={cartProducts} setCartProducts={setCartProducts} />
-                </section>
-            </div>
-        </StateWrapper>
+        <div className="container">
+            <section id="products">
+                <ProductsList title={title} products={availableProducts} handleAddToCart={handleAddToCart} />
+            </section>
+            <section id="cart">
+                <hr />
+                <Cart cartProducts={cartProducts} setCartProducts={setCartProducts} />
+            </section>
+        </div>
     );
 }
 

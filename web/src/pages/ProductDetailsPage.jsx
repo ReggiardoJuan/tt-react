@@ -22,9 +22,10 @@ export default function ProductDetailsPage() {
     } = useProducts(getProduct);
 
     return (
-        <StateWrapper loading={loading} error={error} items={product}>
-            <ReturnHome />
-            <ProductDetails product={product} />
-        </StateWrapper>
+        <div className="container">
+            <StateWrapper loading={loading} error={error} items={product}>
+                <ProductDetails product={product} />
+            </StateWrapper>
+        </div>
     );
 }
