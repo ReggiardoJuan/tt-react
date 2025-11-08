@@ -1,32 +1,29 @@
-import { useCallback, useState } from 'react';
+import { useCallback, useContext, useState } from 'react';
 
-export const useProductQuantity = (product, handleAddToCart) => {
+import { CartContext } from '../context/CartContext';
+
+export const useProductQuantity = (product) => {
     const [value, setValue] = useState(0);
+    const { addToCart } = useContext(CartContext);
+
     const handleCart = useCallback(() => {
-        handleAddToCart({
-            ...product,
-            quantity: value,
-            total: value * product.price,
-        });
+        addToCart(product, value);
         setValue(0); // Reinicia la cantidad al agregar al carrito
-    }, [product, value, handleAddToCart]);
+    }, [product, value, addToCart]);
 
     const handleChange = (event) => {
-        const newValue = Number(event.target.value);
-        setValue(newValue);
+        setValue(Number(event.target.value));
     };
 
     const handleAdd = (amount) => {
         setValue((prevValue) => prevValue + amount);
     };
 
-    const isDisabled = value <= 0;
-
     return {
         value,
         handleCart,
         handleChange,
         handleAdd,
-        isDisabled,
+        isDisabled: value <= 0,
     };
 };

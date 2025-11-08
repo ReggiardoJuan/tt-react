@@ -1,11 +1,10 @@
-
 import { Link } from 'react-router-dom';
 
 import styles from './Product.module.css';
 import ProductCardActions from './ProductCardActions.component';
 import { trimString } from '../../utils/string.utils';
 
-export default function ProductCard({ product, handleAddToCart }) {
+export default function ProductCard({ product }) {
     return (
         <div className={styles.product}>
             <img className={styles['product-image']} src={product.image} alt={product.title} />
@@ -22,7 +21,7 @@ export default function ProductCard({ product, handleAddToCart }) {
                 </div>
             </div>
             <div className={styles.actions}>
-                <ProductCardActions handleAddToCart={handleAddToCart} product={product} />
+                <ProductCardActions product={product} />
                 <Link to={`/products/${product.category}/${product.id}`} state={product}>
                     <button className="outline" aria-label="Ver detalles">
                         Ver detalles

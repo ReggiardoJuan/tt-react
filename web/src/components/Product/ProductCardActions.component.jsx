@@ -1,8 +1,8 @@
 import styles from './Product.module.css';
 import { useProductQuantity } from '../../hooks/useProductQuantity';
 
-export default function ProductCardActions({ product, handleAddToCart }) {
-    const { value, handleCart, handleChange, handleAdd, isDisabled } = useProductQuantity(product, handleAddToCart);
+export default function ProductCardActions({ product }) {
+    const { value, handleCart, handleChange, handleAdd, isDisabled } = useProductQuantity(product);
 
     return (
         <div className={styles.actions}>
