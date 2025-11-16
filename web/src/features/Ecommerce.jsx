@@ -20,10 +20,6 @@ function ECommerce({ fetchProducts, title }) {
                 <section id="products">
                     <ProductsList title={title} products={availableProducts} />
                 </section>
-                <section id="cart">
-                    <hr />
-                    <Cart />
-                </section>
             </div>
         </>
     );

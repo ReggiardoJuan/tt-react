@@ -1,4 +1,3 @@
-
 .navigation {
     /* background-color: var(--pico-primary); */
     /* color: var(--pico-primary-inverse); */
@@ -19,16 +18,12 @@
     margin: 0;
 }
 
-.nav-icons svg{
-    padding: 20px 0 0 0 0;
-    align-items: center;
-    stroke: var(--pico-primary);
-    &:hover {
-        stroke: var(--pico-secondary);
-    }
+.cart-icon-container {
+    cursor: pointer;
+    color: var(--pico-primary);
 }
 
-a.active:not(:has(svg)) {
+a.active {
     border: 2px solid var(--pico-primary);
     border-radius: 999px;
     padding: 4px 12px;
@@ -36,8 +31,16 @@ a.active:not(:has(svg)) {
     transition: all 0.1s ease-in-out;
 }
 
-a.active svg {
-    text-decoration: none;
-    transform: scale(1.2);
-    transition: all 0.1s ease-in-out;
+.badge {
+    align-items: center;
+    color: var(--pico-contrast-inverse);
+    display: flex;
+    font-size: 0.6rem;
+    height: 20px;
+    justify-content: center;
+    line-height: 1;
+    min-width: 20px;
+    position: absolute;
+    right: 20px;
+    top: 5px;
 }
