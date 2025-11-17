@@ -5,9 +5,19 @@ import ProductCardActions from './ProductCardActions.component';
 import { trimString } from '../../utils/string.utils';
 
 export default function ProductCard({ product }) {
+    const isAvailable = product.id % 2 === 0;
+    const cardClasses = isAvailable ? styles.product : `${styles.product} ${styles.outOfStock}`;
+
     return (
-        <div className={styles.product}>
-            <img className={styles['product-image']} src={product.image} alt={product.title} />
+        <div className={cardClasses}>
+            <div className={styles['image-wrapper']}>
+                <img className={styles['product-image']} src={product.image} alt={product.title} />
+                {!isAvailable && (
+                    <div className={styles.stockOverlay}>
+                        <span>Agotado</span>
+                    </div>
+                )}
+            </div>
             <div className={styles['product-info']}>
                 <h3 className={styles['product-title']}>{trimString(product.title, 75)}</h3>
                 <p>{trimString(product.description, 75)}</p>
@@ -21,7 +31,7 @@ export default function ProductCard({ product }) {
                 </div>
             </div>
             <div className={styles.actions}>
-                <ProductCardActions product={product} />
+                <ProductCardActions product={product} isAvailable={isAvailable} />
                 <Link to={`/products/${product.category}/${product.id}`} state={product}>
                     <button className="outline" aria-label="Ver detalles">
                         Ver detalles

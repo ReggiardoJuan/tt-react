@@ -9,7 +9,7 @@ export default function ReturnHome() {
             {location.pathname !== '/' &&
             <Link to="/" className="navigation">
                 <span>
-                    <CornerUpLeft /> Volver
+                    <CornerUpLeft /> Volver a inicio
                 </span>
             </Link>
             }

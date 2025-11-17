@@ -1,7 +1,7 @@
 import styles from './Product.module.css';
 import { useProductQuantity } from '../../hooks/useProductQuantity';
 
-export default function ProductCardActions({ product }) {
+export default function ProductCardActions({ product, isAvailable }) {
     const { value, handleCart, handleChange, handleAdd, isDisabled } = useProductQuantity(product);
 
     return (
@@ -11,12 +11,12 @@ export default function ProductCardActions({ product }) {
                     −
                 </button>
                 <input type="number" value={value} onChange={handleChange} min="0" max="100" />
-                <button className="outline" onClick={() => handleAdd(1)}>
+                <button className="outline" onClick={() => handleAdd(1)} disabled={!isAvailable}>
                     +
                 </button>
             </div>
-            <button aria-label="Agregar" disabled={isDisabled} onClick={handleCart}>
-                Agregar
+            <button aria-label="Agregar" disabled={isDisabled || !isAvailable} onClick={handleCart}>
+                {isAvailable ? 'Agregar' : 'Agotado'}
             </button>
         </div>
     );

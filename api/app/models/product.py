@@ -10,7 +10,7 @@ class Product(Model):
     image = CharField()
     price = FloatField()
     owner = ForeignKeyField(User, backref="products")
-
+    stock = IntegerField(default=0)
     rating_rate = FloatField(default=0)
     rating_count = IntegerField(default=0)
 

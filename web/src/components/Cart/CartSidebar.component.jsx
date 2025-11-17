@@ -24,7 +24,7 @@ export default function CartSidebar({ onClose }) {
                     <li key={product.id} className={styles['cart-row']}>
                         <img src={product.image} alt={product.title} />
                         <div className={styles['cart-item-info-left']}>
-                            <p>{`${product.quantity} x ${trimString(product.title, 20)}`}</p>
+                            <p>{`${product.quantity} x ${trimString(product.title, 25)}`}</p>
                             <p className={styles.price}>${product.price.toFixed(2)}</p>
                         </div>
                         <div className={styles['cart-item-info-right']}>

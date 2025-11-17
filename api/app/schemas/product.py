@@ -10,6 +10,7 @@ class ProductIn(BaseModel):
     category: str
     image: str
     price: float
+    stock: int
 
 class ProductCreate(ProductIn):
     owner_id: int

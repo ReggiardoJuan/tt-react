@@ -1,6 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 
 import AboutPage from '../pages/AboutPage';
+import AdminPage from '../pages/AdminPage';
 import CartPage from '../pages/CartPage';
 import CategoryPage from '../pages/CategoryPage';
 import ContactPage from '../pages/ContactPage/ContactPage';
@@ -14,6 +15,7 @@ export default function AppRoutes() {
         <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />
+            <Route path="/admin" element={<AdminPage />} />
             <Route path="/cart" element={<CartPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/login" element={<LoginPage />} />

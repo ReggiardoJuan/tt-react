@@ -33,7 +33,7 @@ a.active {
 
 .badge {
     align-items: center;
-    color: var(--pico-contrast-inverse);
+    color: black;
     display: flex;
     font-size: 0.6rem;
     height: 20px;

@@ -30,6 +30,7 @@ def get_product_details(id: int):
         "category": product.category,
         "image": product.image,
         "owner_id": product.owner_id,
+        "stock": product.stock,
         "rating": {
             "rate": product.rating_rate,
             "count": product.rating_count
@@ -49,6 +50,7 @@ def create_product(data: ProductCreate):
         category=data.category,
         image=data.image,
         owner_id=current_user,
+        stock=data.stock,
         rating_rate=data.rating.rate,
         rating_count=data.rating.count
     )
@@ -69,6 +71,7 @@ def delete_product(id: int):
         "category": product.category,
         "image": product.image,
         "owner_id": product.owner_id,
+        "stock": product.stock,
         "rating": {
             "rate": product.rating_rate,
             "count": product.rating_count
