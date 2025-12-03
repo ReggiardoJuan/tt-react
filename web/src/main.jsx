@@ -7,7 +7,7 @@ import './index.css';
 
 import App from './App.jsx';
 import '@picocss/pico/css/pico.pumpkin.min.css';
-import { CartProvider } from './context/CartContext.jsx';
+import { CartProvider } from './features/cart/CartContext';
 
 createRoot(document.getElementById('root')).render(
     <StrictMode>

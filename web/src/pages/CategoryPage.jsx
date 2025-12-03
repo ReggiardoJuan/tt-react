@@ -2,8 +2,8 @@ import { useCallback } from 'react';
 
 import { useParams } from 'react-router-dom';
 
-import ECommerce from '../features/Ecommerce';
-import { getProductsByCategory } from '../services/products';
+import Store from '../features/store/Store';
+import { getProductsByCategory } from '../features/store/services/products';
 import { toTitleCase } from '../utils/string.utils';
 
 export default function CategoryPage() {
@@ -13,5 +13,5 @@ export default function CategoryPage() {
         return getProductsByCategory(category);
     }, [category]);
 
-    return <ECommerce fetchProducts={getProducts} title={toTitleCase(category)} />;
+    return <Store fetchProducts={getProducts} title={toTitleCase(category)} />;
 }

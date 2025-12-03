@@ -1,14 +1,14 @@
 import { Route, Routes } from 'react-router-dom';
 
-import AboutPage from '../pages/AboutPage';
-import AdminPage from '../pages/AdminPage';
-import CartPage from '../pages/CartPage';
+import AdminPage from '../features/admin/AdminPage';
+import LoginPage from '../features/auth/LoginPage';
+import CartPage from '../features/cart/CartPage';
+import AboutPage from '../features/content/AboutPage';
+import ContactPage from '../features/content/Contact/ContactPage';
+import ProductDetailsPage from '../features/store/ProductDetailsPage';
 import CategoryPage from '../pages/CategoryPage';
-import ContactPage from '../pages/ContactPage/ContactPage';
 import HomePage from '../pages/HomePage';
-import LoginPage from '../pages/LoginPage';
 import NotFoundPage from '../pages/NotFoundPage';
-import ProductDetailsPage from '../pages/ProductDetailsPage';
 
 export default function AppRoutes() {
     return (

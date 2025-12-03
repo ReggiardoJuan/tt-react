@@ -1,5 +1,5 @@
 import NotFoundImage from '../assets/notFoundImage';
-import ReturnHome from '../components/shared/ReturnHome';
+import ReturnHome from '../shared-components/ReturnHome';
 
 export default function NotFoundPage() {
     return (

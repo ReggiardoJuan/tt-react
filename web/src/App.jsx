@@ -1,11 +1,11 @@
 import { useState } from 'react';
 import './assets/styles/globals.css';
 
-import CartSidebar from './components/Cart/CartSidebar.component';
-import Footer from './components/Footer/Footer.component';
-import Header from './components/Header/Header.component';
-import Sidebar from './components/Sidebar/Sidebar.component';
+import CartSidebar from './features/cart/components/CartSidebar.component';
 import AppRoutes from './routes/App.routes';
+import Footer from './shared-components/Footer/Footer.component';
+import Header from './shared-components/Header/Header.component';
+import Sidebar from './shared-components/Sidebar/Sidebar.component';
 
 function App() {
     const [isCartOpen, setIsCartOpen] = useState(false);

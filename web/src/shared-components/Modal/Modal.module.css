@@ -1,0 +1,19 @@
+overlay {
+    position: 'fixed';
+    inset: 0;
+    background: 'rgba(0;0;0;0.5)';
+    display: 'flex';
+    justifycontent: 'center';
+    alignitems: 'center';
+}
+
+modal {
+    background: '#fff';
+    padding: '20px';
+    borderradius: '8px';
+    minwidth: '300px';
+}
+
+closeButton {
+    margintop: '10px';
+}
