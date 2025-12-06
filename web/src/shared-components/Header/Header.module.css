@@ -9,7 +9,7 @@
     position: sticky;
     border-bottom: 2px solid var(--pico-primary);
     background-color: var(--pico-background-color);
-    z-index: 1000;
+    z-index: 999;
 }
 
 .logo img {

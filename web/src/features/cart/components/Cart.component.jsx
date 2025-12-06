@@ -42,7 +42,7 @@ export default function Cart() {
                                 <LinkIcon />
                             </Link>
                             <button onClick={() => removeFromCart(product.id)}>
-                                <Trash2 className={styles.delete} />
+                                <Trash2 className="delete" />
                             </button>
                         </div>
                     </li>
@@ -51,7 +51,7 @@ export default function Cart() {
             <div className={styles['cart-info']}>
                 <div></div>
                 <button className="outline" onClick={emptyCart} style={{ display: getTotalItems() !== 0 ? '' : 'none' }}>
-                    <Trash2 className={styles.delete} /> Vaciar
+                    <Trash2 className="delete" /> Vaciar
                 </button>
             </div>
         </div>

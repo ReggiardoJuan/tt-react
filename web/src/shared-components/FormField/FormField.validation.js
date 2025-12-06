@@ -26,6 +26,28 @@ export const phone = (value) => {
     return null;
 };
 
+export const price = (value) => {
+    const priceRegex = /^\d+(\.\d{1,2})?$/;
+    if (!value) {
+        return null;
+    }
+    if (!priceRegex.test(value)) {
+        return 'El campo debe ser un precio válido (número y decimal)';
+    }
+    return null;
+};
+
+export const number = (value) => {
+    const numberRegex = /^\d+$/;
+    if (!value) {
+        return null;
+    }
+    if (!numberRegex.test(value)) {
+        return 'El campo debe ser un número';
+    }
+    return null;
+};
+
 export const minLength = (min) => (value) => {
     const trimmedValue = String(value || '').trim();
     if (!value) {

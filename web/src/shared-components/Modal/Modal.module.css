@@ -1,19 +1,37 @@
-overlay {
-    position: 'fixed';
+.overlay {
+    align-items: center;
+    display: flex;
+    height: 100%;
     inset: 0;
-    background: 'rgba(0;0;0;0.5)';
-    display: 'flex';
-    justifycontent: 'center';
-    alignitems: 'center';
+    justify-content: center;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
 }
 
-modal {
-    background: '#fff';
-    padding: '20px';
-    borderradius: '8px';
-    minwidth: '300px';
+.modal {
+    justify-content: center;
+    transform: scale(0.8);
+    background-color: var(--pico-contrast-inverse);
+    border-radius: 8px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    min-width: 50%;
+    max-width: 300px;
+    z-index: 1001;
 }
 
-closeButton {
-    margintop: '10px';
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px 0 20px;
+}
+
+.closeButton {
+    background: none;
+    border: none;
+    color: var(--pico-contrast);
+    font-size: 1.2rem;
 }

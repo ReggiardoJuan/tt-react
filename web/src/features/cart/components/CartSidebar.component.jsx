@@ -29,7 +29,7 @@ export default function CartSidebar({ onClose }) {
                         </div>
                         <div className={styles['cart-item-info-right']}>
                             <button onClick={() => removeFromCart(product.id)}>
-                                <Trash2 className={styles.delete} />
+                                <Trash2 className="delete" />
                             </button>
                         </div>
                     </li>

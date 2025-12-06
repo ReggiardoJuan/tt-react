@@ -25,18 +25,18 @@ li {
     min-height: 50vh;
 }
 
-.image-container svg {
+.image-container > svg {
     transform: rotate(5deg);
     margin-bottom: 20px;
 }
 
 .pill {
-  display: inline-flex;
-  padding: 0.25em 0.75em;
-  border-radius: 1000px;
-  background-color: var(--pico-contrast);
-  color: var(--pico-contrast-inverse);
-  font-size: 0.67rem;
+    display: inline-flex;
+    padding: 0.25em 0.75em;
+    border-radius: 1000px;
+    background-color: var(--pico-contrast);
+    color: var(--pico-contrast-inverse);
+    font-size: 0.67rem;
 }
 
 .pill svg {

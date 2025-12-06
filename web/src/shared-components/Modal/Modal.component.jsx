@@ -1,17 +1,20 @@
 import styles from './Modal.module.css';
 
-export default function Modal({ open, onClose, children }) {
+export default function Modal({ title, open, onClose, children }) {
     if (!open) {
         return null;
     }
 
     return (
-        <div style={styles.overlay} onClick={onClose}>
-            <div style={styles.modal} onClick={(e) => e.stopPropagation()}>
+        <div className={styles.overlay} onClick={onClose}>
+            <div className={styles.modal} onClick={(e) => e.stopPropagation()}>
+                <div className={styles.header}>
+                    <h3>{title}</h3>
+                    <button className={styles.closeButton} onClick={onClose}>
+                        &times;
+                    </button>
+                </div>
                 {children}
-                <button className={styles.closeButton} onClick={onClose}>
-                    &times;
-                </button>
             </div>
         </div>
     );
